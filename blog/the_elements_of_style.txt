@@ -9,9 +9,9 @@ The Elements of Style by William Strunk Jr. and E.B. White
 	- did not pay attention to | ignored
 
 - Placing negative and positive in opposition makes for a stronger structure.
-	- Ask not what your country can do for you--ask what you can do for your country.
-	- Negative words other than not are usually strong.
-	- Her loveliness I never knew / Until she smiled on me.
+    - Ask not what your country can do for you--ask what you can do for your country.
+    - Negative words other than not are usually strong.
+    - Her loveliness I never knew / Until she smiled on me.
 
 - If your every sentence admits a doubt, your writing will lack authority. Save the auxiliaries 'would', 'should', 'could', 'may', 'might', and 'can' for situations involving real uncertainty.
 
