@@ -1,0 +1,55 @@
+The Elements of Style by William Strunk Jr. and E.B. White
+
+- Put statements in positive form. Make definite assertions. Avoid tame, colorless, hesitating, noncommittal language. Use the word not as a means of denial or in antithesis, never as a means of evasion.
+    - He was not very often on time. | He usually came late.
+
+- Consciously or unconsciously, the reader is dissatisfied with being told only what is not; the reader wishes to be told what is. Hence, as a rule, it is better to express even a negative in positive form.
+    - not honest               | dishonest
+    - did not remember         | forgot
+	- did not pay attention to | ignored
+
+- Placing negative and positive in opposition makes for a stronger structure.
+	- Ask not what your country can do for you--ask what you can do for your country.
+	- Negative words other than not are usually strong.
+	- Her loveliness I never knew / Until she smiled on me.
+
+- If your every sentence admits a doubt, your writing will lack authority. Save the auxiliaries 'would', 'should', 'could', 'may', 'might', and 'can' for situations involving real uncertainty.
+
+- The surest way to arouse and hold the reader's attention is by being specific, definite, and concrete.
+
+- Omit needless words.
+	- there is no doubt but that | no doubt
+	- used for fuel purposes     | used for fuel
+	- he is a man who            | he
+	- the reason why is that     | because
+
+- A writer may err by making sentences too compact and periodic. An occasional loose sentence prevents the style from becoming too formal and gives the reader a certain relief. Consequently, loose sentences are common in easy, unstudied writing. The danger is that there may be too many of them [...] using as connectives 'and', 'but', and, less frequently, 'who', 'which', 'when', 'where',  and 'while'.
+
+- Keep related words together.
+	- He noticed a large stain in the rug that was right in the center | He noticed a large stain right in the center of the rug. [...]
+	- The subject of a sentence and the principal verb should not, as a rule, be separated by a phrase or clause that can be transferred to the beginning.<br>
+	- A dog, if you fail to discipline him, becomes a household pest. | Unless disciplined, a dog becomes a household pest.
+
+- Place the emphatic words of a sentence at the end.
+	- The proper place in the sentence for the word or group of words that the writer desires to make most prominent is usually the end.
+	- This steel is principally used for making razors, because of its hardness. | Because of its hardness, this steel is used principally for making razors.
+
+- Case. Often unnecessary.
+	- In many cases, the rooms lacked air conditioning. | Many of the rooms lacked air conditioning.
+
+- Due to. Loosely used for 'through', 'because of', or 'owing to', in adverbial phrases.
+	- He lost the first game due to carelessness | He lost the first game because of carelessness
+
+- Factor. A hackneyed word; the expressions of which it is a part of can usually be replaced by something more direct and idiomatic.
+	- Air power is becoming an increasingly important factor in deciding battles. | Air power is playing a larger and larger part in deciding battles.
+
+- Farther. Further. The two words are commonly interchanged, but there is a distinction worth observing: 'farther' serves best as a distance word, 'further' as a time or quantity word. You chase a ball farther than the other fellow, you pursue a subject further.
+
+- However. Avoid starting a sentence with 'however' when the meaning is "nevertheless." The word usually serves better when not in first position.
+
+- Importantly. Avoid by rephrasing.
+    - More importantly, he paid for the damages. | What's more, he paid for the damages.
+
+- -ize. Do not coin verbs by adding this tempting suffix. Many good and useful verbs do end in -ize: summarize, fraternize, harmonize, fertilize [...] Never tack -ize onto a noun to create a verb. [...] Why say "utilize" when there is the simple, unpretentious word "use"?
+
+- Very. Use this word sparingly. Where emphasis is necessary, use words strong in themselves.
