@@ -10,7 +10,7 @@
     <div class="index">
         <div class="body">
             <h1 class="title">Timothy Liu</h1>
-            <p>I am a software engineer at Facebook working on privacy.</p>
+            <p>I am a software engineer at Facebook.</p>
             <p>I graduated from the University of California, Berkeley in 2019 with a B.A. in computer science and minor in electrical engineering and computer science.</p>
 	    <img src="assets/berkeley.jpg" width="45%" id="indexImg" />
             <h2>Links</h2>
@@ -22,12 +22,19 @@
 	    var d = new Date();
 	    var month = d.getMonth();
 
-	    if (month % 2 !== 0) {
+	    if (month % 3 === 0) {
 		imgSrc = "assets/boston.jpg";
 		width = "28%"
-	        document.getElementById("indexImg").src = imgSrc;
-		document.getElementById("indexImg").style.width = width;
+	    } else if (month % 3 === 1) {
+		imgSrc = "assets/moonrise.jpeg";
+		width = "75%"
+	    } else {
+		imgSrc = "assets/berkeley.jpg";
+		width = "45%"
 	    }
+
+	    document.getElementById("indexImg").style.width = width;
+	    document.getElementById("indexImg").src = imgSrc;
 
 	</script>
     </div>
