@@ -12,29 +12,88 @@
             <h1 class="title">Timothy Liu</h1>
             <p>I am a software engineer at Facebook.</p>
             <p>I graduated from the University of California, Berkeley in 2019 with a B.A. in computer science and minor in electrical engineering and computer science.</p>
-	    <img src="assets/berkeley.jpg" width="45%" id="indexImg" />
-            <h2>Links</h2>
-	    <p><a href="https://www.linkedin.com/in/tbliu" target="_blank">LinkedIn</a></p>
-	    <p><a href="https://github.com/tbliu" target="_blank">GitHub</a></p>
-	    <p><a href="/blog.html">Blog</a></p>
+	    <p><a href="assets/resume/timothy_liu_resume_redacted.pdf">Resume</a> &middot; <a href="/blog.html">Blog</a></p>
+	    <img src="assets/homepage/berkeley.jpg" width="45%" id="indexImg" />
+            <h2>Profiles</h2>
+	    <p><a href="https://www.linkedin.com/in/tbliu" target="_blank">LinkedIn</a>
+	    &middot;
+	    <a href="https://github.com/tbliu" target="_blank">GitHub</a>
+	    &middot;
+	    <a href="https://angel.co/u/timothybliu" target="_blank">AngelList</a>
+	    &middot;
+	    <a href="https://twitter.com/tbliu" target="_blank">Twitter</a></p>
         </div>
 	<script>
 	    var d = new Date();
 	    var month = d.getMonth();
-
-	    if (month % 3 === 0) {
-		imgSrc = "assets/boston.jpg";
-		width = "28%"
-	    } else if (month % 3 === 1) {
-		imgSrc = "assets/moonrise.jpeg";
-		width = "75%"
-	    } else {
-		imgSrc = "assets/berkeley.jpg";
-		width = "45%"
+	   
+	    switch (month) {
+	        case 0: // January
+		    imgSrc = "assets/homepage/aspen.jpg";
+		    width = "29%";
+		    caption = "Aspen Mountains - 2018";
+		    break;
+		case 1: // February
+		    imgSrc = "assets/homepage/chinesedog.JPG";
+		    width = "55%";
+		    caption = "Smiling Dog in China - 2017";
+		    break;
+		case 2: // March
+		    imgSrc = "assets/homepage/tahoe.JPG";
+		    width = "50%";
+		    caption = "Lake Tahoe - 2018";
+		    break;
+		case 3: // April
+		    imgSrc = "assets/homepage/washingtonmemorial.jpg";
+		    width = "55%";
+		    caption = "Washington Memorial - 2016";
+		    break;
+		case 4: // May
+		    imgSrc = "assets/homepage/redwoodcity.JPG";
+		    width = "50%";
+		    caption = "Bair Island - 2020. 'Like a patient etherized upon a table.'";
+		    break;
+		case 5: // June
+		    imgSrc = "assets/homepage/berkeley.jpg";
+		    width = "50%";
+		    caption = "Berkeley Fire Trails - 2017";
+		    break;
+		case 6: // July
+		    imgSrc = "assets/homepage/boston.jpg";
+		    width = "29%";
+		    caption = "Boston Commons - 2018";
+		    break;
+		case 7: // August
+		    imgSrc = "assets/homepage/huashan.JPG";
+		    width = "50%";
+		    caption = "Huashan, China - 2017";
+		    break;
+		case 8: // September
+		    imgSrc = "assets/homepage/hawaii.JPG";
+		    width = "50%";
+		    caption = "Haleakala National Park, Hawaii - 2018";
+		    break;
+		case 9: // October
+		    imgSrc = "assets/homepage/bayarea_fires.jpg";
+		    width = "75%";
+		    caption = "Bay Area Fires - 2018";
+		    break;
+		case 10: // November
+		    imgSrc = "assets/homepage/moonrise.jpeg";
+		    width = "75%";
+		    caption = "Sunset and Moonrise - 2019";
+		    break;
+		default: // December
+		    imgSrc = "assets/homepage/seattle.JPG";
+		    width = "50%";
+		    caption = "Seattle - 2019";
 	    }
 
-	    document.getElementById("indexImg").style.width = width;
-	    document.getElementById("indexImg").src = imgSrc;
+	    var img = document.getElementById("indexImg");
+	    img.style.width = width;
+	    img.src = imgSrc;
+	    img.alt = caption;
+	    img.title = caption;
 
 	</script>
     </div>
