@@ -2,15 +2,73 @@ html {
     overflow-y:auto;
     overflow-x:hidden;
     font-family: sans-serif;
-    line-height:1.25;
+    line-height: 1.25;
 }
 
 .index {
     text-align: center;
 }
 
-.body {
-    width: 100%;
+body {
+    background-color: teal;
+}
+
+#window {
+    font-family: 'Anonymous Pro', monospace;
+    background-color: lightgrey;
+    height: 750px;
+    width: 1300px;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    position: absolute;
+}
+
+.animation-canvas {
+    margin-left: 2%;
+    text-align: center;
+    width: 96%;
+    background-color: white;
+    margin-top: 30px;
+    height: 75%;
+}
+
+.about-me {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.links {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.ext-button {
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    /* box-shadow: 10px 5px 5px black; */
+}
+
+.ext-button,
+.close-button {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.ext-button:active,
+.close-button:active {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.ext-button:first-of-type {
+    
 }
 
 #blog-footer {
@@ -28,4 +86,14 @@ ul, li {
     text-align: left;
     margin-bottom: 2%;
     margin-bottom: 2%;
+}
+
+#window-header {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background-color: #0000b3;
+    color: white;
+    padding: 5px;
+    cursor: move;
 }
