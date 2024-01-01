@@ -84,15 +84,29 @@ body {
     text-align: left;
 }
 
+#blog-footer > a {
+    text-decoration: none;
+    font-size: 48px;
+}
+
 .title {
     font-size: 45px;
     margin-bottom:-3px;
 }
 
-ul, li {
+.blog-body ul, li {
     text-align: left;
     margin-bottom: 2%;
     margin-bottom: 2%;
+}
+
+.blog-body a {
+    color: darkorange;
+    font-size: 18px;
+}
+
+.blog-body a:hover {
+    color: pink;
 }
 
 #window-header {
