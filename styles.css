@@ -16,7 +16,7 @@ body {
 #window {
     font-family: 'Anonymous Pro', monospace;
     background-color: lightgrey;
-    height: 750px;
+    height: 775px;
     width: 1300px;
     border-top: 4px solid white;
     border-left: 4px solid white;
@@ -25,13 +25,20 @@ body {
     position: absolute;
 }
 
-.animation-canvas {
-    margin-left: 2%;
+#animation-canvas {
+    margin-left: 25px;
     text-align: center;
-    width: 96%;
+    width: 1248px;
     background-color: white;
     margin-top: 30px;
-    height: 75%;
+    height: 575px;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+#ascii-canvas,
+#eye {
+ 
 }
 
 .about-me {
