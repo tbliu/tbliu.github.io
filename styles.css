@@ -98,15 +98,16 @@ body {
     text-align: left;
     margin-bottom: 2%;
     margin-bottom: 2%;
+    color: pink;
 }
 
 .blog-body a {
-    color: darkorange;
+    color: pink;
     font-size: 18px;
 }
 
 .blog-body a:hover {
-    color: pink;
+    color: darkorange;
 }
 
 #window-header {
