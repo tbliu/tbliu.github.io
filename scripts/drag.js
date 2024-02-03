@@ -48,3 +48,60 @@ function dragWindow() {
 	header.onmousedown = dragMouseDown;
     }
 }
+
+
+function loadAboutMe() {
+    // Only have at most one window open.
+    if (document.getElementById('window')) {
+	return;
+    }
+
+    const htmlString = `<div id="window">
+	<div id="window-header">
+	  <span>TIMOTHY_LIU</span>
+	  <span style="margin-left:auto;">
+	    <button class="close-button" onclick="document.getElementById('window').remove()">
+	      <strong style="font-size:16px;">X</strong>
+	    </button>
+	  </span>
+	</div>
+
+	<div id="animation-canvas"></div>
+
+	<div class="about-me">
+	  <p>I am a software engineer interested in finance and electronics.</p>
+	</div>
+
+	<div class="links">
+	  <span>
+            <button
+	      class="ext-button"
+	      onclick="window.open('https://linkedin.com/in/tbliu', '_blank')"
+	      >
+	      LinkedIn
+	    </button>
+	  </span>
+
+	  <span>
+            <button
+	      class="ext-button"
+	      onclick="window.open('https://github.com/tbliu', '_blank')"
+	      >
+	      GitHub
+	    </button>
+	  </span>
+
+	  <span>
+            <button
+	      class="ext-button"
+	      onclick="window.open('https://twitter.com/tbliu', '_blank')"
+	      >
+	      Twitter
+	    </button>
+	  </span>
+	</div>
+      </div>`
+
+    const div = document.getElementById('wrapper-container')
+    div.innerHTML = htmlString;
+}

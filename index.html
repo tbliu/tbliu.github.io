@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/homepage/favicon.ico">
 
     <!-- Load Anonymous Pro font -->
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
@@ -12,72 +13,27 @@
 
     <script src="scripts/drag.js"></script>
     <script src="scripts/ascii-animation.js"></script>
-    <script>
-      window.addEventListener('load', function () {
-	  dragWindow();
-	  loadCanvas();
-      });
-    </script>
+    <script src="scripts/desktop-icon.js"></script>
   </head>
   <body>
-    <div id="window">
-      <div id="window-header">
-	<span>TIMOTHY_LIU</span>
-	<span style="margin-left:auto;">
-	  <button class="close-button" onclick="window.close()">
-	    <strong style="font-size:16px;">X</strong>
-	  </button>
-	</span>
+      <div style="margin-top:30px;margin-left:20px">
+          <div style="font-weight:lighter;font-size:22px;">Timothy Liu</div>
+          <div style="font-size:14px;max-width:500px;">
+              <p>I am a developer based in San Francisco exploring the intersection of AI/ML and finance.</p>
+              <p>Previously I was an NLP engineer at Balyasny Asset Management, a software engineer at Facebook, and a student at U.C. Berkeley.</p>
+              <!--<figure style="margin:0;flex-flow:column;max-width:200px">
+                  <img src="/assets/homepage/obliquewing.jpg" width="200" height="200"></img>
+                  <figcaption style="font-size:7px;text-align:center;">A cool plane.</figcaption>
+              </figure>-->
+          </div>
+
+          <div style="position:absolute;bottom:30px;font-size:12px;">
+            <span style="margin-right:5px"><a href="https://github.com/tbliu" target="_blank">GitHub</a></span> •
+            <span style="margin-left: 5px; margin-right:5px"><a href="https://www.linkedin.com/in/tbliu/" target="_blank">LinkedIn</a></span> •
+            <span style="margin-left: 5px; margin-right:5px"><a href="https://twitter.com/tbliu" target="_blank">Twitter</a></span> •
+            <span style="margin-left: 5px;"><a href="/blog">Blog</a></span>
+          </div>
       </div>
-
-      <div>
-	
-      </div>
-
-      <div id="animation-canvas">
-	<!-- 1248 x 562 -->
-	<canvas id="ascii-canvas" width="208px" height="96px">
-	  <img id="eye" src="/assets/homepage/eye.jpg" width="208px" height="96px">
-	</canvas>
-      </div>
-
-      <div class="about-me">
-	<p>I am a software engineer interested in finance and electronics.</p>
-      </div>
-
-      <div class="links">
-	<span>
-          <button
-	    class="ext-button"
-	    onclick="window.open('https://linkedin.com/in/tbliu', '_blank')"
-	    >
-	    LinkedIn
-	  </button>
-	</span>
-
-	<span>
-          <button
-	    class="ext-button"
-	    onclick="window.open('https://github.com/tbliu', '_blank')"
-	    >
-	    GitHub
-	  </button>
-	</span>
-
-	<span>
-          <button
-	    class="ext-button"
-	    onclick="window.open('https://twitter.com/tbliu', '_blank')"
-	    >
-	    Twitter
-	  </button>
-	</span>
-
-	<span>
-          <button class="ext-button" onclick="location.href = '/blog'">Blog</button>
-	</span>
-      </div>
-    </div>
   </body>
 
 </html>
