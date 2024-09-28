@@ -14,17 +14,40 @@
     <script src="scripts/drag.js"></script>
     <script src="scripts/ascii-animation.js"></script>
     <script src="scripts/desktop-icon.js"></script>
+    <style>
+      .iframe-container {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        background-color: #EEE1C6;
+      }
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+	  figure {
+ 	    margin-left: 0;
+        margin-right: 0;
+      }
+    </style>
+ 
   </head>
   <body>
       <div style="margin-top:30px;margin-left:20px">
           <div style="font-weight:lighter;font-size:22px;">Timothy Liu</div>
           <div style="font-size:14px;max-width:500px;">
-              <p>I am a founder based in San Francisco working on the intersection of AI/ML and finance at <a href="https://lumosity.ai" target="_blank">Lumosity</a>.</p>
-              <p>Previously I was an NLP engineer at Balyasny Asset Management, a software engineer at Facebook, and a student at U.C. Berkeley.</p>
-              <!--<figure style="margin:0;flex-flow:column;max-width:200px">
-                  <img src="/assets/homepage/obliquewing.jpg" width="200" height="200"></img>
-                  <figcaption style="font-size:7px;text-align:center;">A cool plane.</figcaption>
-              </figure>-->
+              <p>Interested in all things EECS and finance.</p>
+              <p>Working on <a href="https://implied.com" target="_blank">Implied</a>.</p>
+			  <figure>
+				  <div class="iframe-container">
+					  <iframe src="https://implied-3d-logo.tliu.io" scrolling="no" style="width:150px;height:200px;border:0;"></iframe>
+				  </div>
+			  </figure>
+
           </div>
 
           <div style="position:absolute;bottom:30px;font-size:12px;">
