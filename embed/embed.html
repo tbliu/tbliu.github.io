@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../styles.css">
+    <!--<link rel="icon" type="image/x-icon" href="/assets/homepage/favicon.ico">-->
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timothy Liu</title>
+
+  </head>
+  <body>
+    <iframe
+      width="840"
+      height="630"
+      id="embedded-video"
+      allow="autoplay; encrypted-media"
+    ></iframe>
+  </body>
+
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const iframeElem = document.getElementById("embedded-video");
+    const youtubeLink = urlParams.get("url");
+    let embedLink = youtubeLink.replace("/live/", "/embed/");
+    embedLink = embedLink.replace("/watch?v=", "/embed/")
+    if (embedLink.endsWith("/")) {
+      embedLink = embedLink.slice(0, -1) + "?autoplay=1&rel=0&enablejsapi=1"
+    } else {
+      embedLink += "?autoplay=1&rel=0&enablejsapi=1"
+    }
+    iframeElem.src = embedLink
+  </script>
+
+</html>
+<!DOCTYPE HTML>
