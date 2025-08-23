@@ -34,28 +34,67 @@
       margin-right: 0;
     }
     </style>
+
+    <script>
+      const art = String.raw`
++++++++++++++++++++++++++++++++++++++++++++++++*@@@@@@@@@@@@
++++++++++++++++++++++++++++++++++++++++++++++++*@@@@@@@@@@@@
++++++++++++++++++++++++++++++++++++++++++++++++*@@@@@%S@@@@@
+++++++*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%?++++++*@@@@@?+?#@@@
+++++++?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++++*@@@@@?+++?@@
+++++++?@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++++*@@@@@?+++++%
+++++++?@@@@@#SSSSSSSSSSSSSSSSSSSSSS#@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*+++++++++++++++++++++;%@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*++++++++++++++++++++++%@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*+++++++++++++++++++++;%@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*++++++SSSSSSSSSSSSSSSS#@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@@@@@@@@@@@@@@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@@@@@@@@@@@@@@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@S?%%%%%%%%?S@@@@@++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%;++++++++;%@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%++++++++++%@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%++++++++++%@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%++++++++++%@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%;++++++++;%@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@S?%%%%%%%%?S@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@@@@@@@@@@@@@@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@@@@@@@@@@@@@@@@@@*+++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@#SSSSSSSSSSSSSSSS++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%;+++++++++++++++++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%++++++++++++++++++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@%;+++++++++++++++++++++*@@@@@?++++++
+++++++?@@@@@*+++++*@@@@@#SSSSSSSSSSSSSSSSSSSSSS#@@@@@?++++++
+%+++++?@@@@@*+++++*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@?++++++
+@@?+++?@@@@@*+++++*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@?++++++
+@@@#?+?@@@@@*++++++?%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*++++++
+@@@@@S%@@@@@*+++++++++++++++++++++++++++++++++++++++++++++++
+@@@@@@@@@@@@*+++++++++++++++++++++++++++++++++++++++++++++++
+@@@@@@@@@@@@*+++++++++++++++++++++++++++++++++++++++++++++++`
+
+      const fmt = '%c' + art.replace(/%/g, '%%');  // escape all %
+      const css = 'font-family: monospace; white-space: pre; line-height:1;';
+      console.log(fmt, css);
+    </script>
  
   </head>
   <body>
-      <div style="margin-top:30px;margin-left:20px">
-          <div style="font-size:28px;font-family:serif">Timothy Liu</div>
-          <div style="font-size:14px;max-width:500px;">
-              <p>Working on <a href="https://implied.com" target="_blank">Implied</a>.</p>
-			  <figure>
-				  <div class="iframe-container">
-					  <iframe src="https://implied-3d-logo.tliu.io" scrolling="no" style="width:150px;height:200px;border:0;"></iframe>
-				  </div>
-			  </figure>
+    <div style="margin-top:30px;margin-left:20px">
+      <div style="font-size:28px;font-family:serif">Timothy Liu</div>
+      <div style="font-size:14px;max-width:500px;">
+          <p>Working on <a href="https://implied.com" target="_blank">Implied</a>.</p>
+      <figure>
+        <div class="iframe-container">
+          <iframe src="https://implied-3d-logo.tliu.io" scrolling="no" style="width:150px;height:200px;border:0;"></iframe>
+        </div>
+      </figure>
+    </div>
 
-          </div>
-
-          <div style="position:absolute;bottom:20px;font-size:12px;">
-            <span style="margin-right:5px"><a href="https://github.com/tbliu" target="_blank">GitHub</a></span> •
-            <span style="margin-left: 5px; margin-right:5px"><a href="https://www.linkedin.com/in/tbliu/" target="_blank">LinkedIn</a></span> •
-            <span style="margin-left: 5px; margin-right:5px"><a href="https://twitter.com/tbliu" target="_blank">Twitter</a></span> •
-            <span style="margin-left: 5px;"><a href="/blog">Blog</a></span>
-          </div>
-      </div>
+    <div style="position:absolute;bottom:20px;font-size:12px;">
+      <span style="margin-right:5px"><a href="https://github.com/tbliu" target="_blank">GitHub</a></span> •
+      <span style="margin-left: 5px; margin-right:5px"><a href="https://www.linkedin.com/in/tbliu/" target="_blank">LinkedIn</a></span> •
+      <span style="margin-left: 5px; margin-right:5px"><a href="https://twitter.com/tbliu" target="_blank">Twitter</a></span> •
+      <span style="margin-left: 5px;"><a href="/blog">Blog</a></span>
+    </div>
   </body>
 
 </html>
