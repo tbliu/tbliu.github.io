@@ -1,0 +1,51 @@
+/* Regular */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/fonts/BerkeleyMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/fonts/BerkeleyMono-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/fonts/BerkeleyMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/fonts/BerkeleyMono-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+html {
+    background-color: #EEE1C6;
+    color: #1c364e;
+    user-select: none;
+    /* font-family: Times New Roman,Times,serif; */
+    /* font-family: sans-serif; */
+    font-family: 'Berkeley Mono', monospace;
+    line-height: 1.25;
+}
+
+a {
+    color: #2f5c85;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fb9120;
+    text-decoration: underline;
+}
