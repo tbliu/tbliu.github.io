@@ -2,24 +2,18 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="css/styles.css">
-    <!--link rel="icon" type="image/x-icon" href="/assets/homepage/favicon.ico">-->
 
-    <!-- Load Anonymous Pro font -->
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Timothy Liu</title>
 
-    <script src="scripts/drag.js"></script>
-    <script src="scripts/ascii-animation.js"></script>
-    <script src="scripts/desktop-icon.js"></script>
     <style>
       .iframe-container {
         position: relative;
         width: 400px;
         height: 200px;
-        background-color: #EEE1C6;
+        background-color: inherit;
       }
       .iframe-container iframe {
         position: absolute;
@@ -34,9 +28,14 @@
       margin-right: 0;
     }
     </style>
-
-    <script>
-      const art = String.raw`
+  </head>
+  <body>
+    <div style="margin-top:30px;margin-left:20px;user-select:none;">
+      <div style="font-size:28px;font-family:serif">Timothy Liu</div>
+      <div style="font-size:14px;max-width:500px;">
+        <p>Working on <a href="https://implied.com" target="_blank">Implied</a>.</p>
+        <figure>
+        <pre style="zoom:35%;display:block;" id="implied-ascii">
 +++++++++++++++++++++++++++++++++++++++++++++++*            
 +++++++++++++++++++++++++++++++++++++++++++++++*            
 +++++++++++++++++++++++++++++++++++++++++++++++*     %S     
@@ -69,23 +68,8 @@
    #?+?     *++++++?%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*++++++
      S%     *+++++++++++++++++++++++++++++++++++++++++++++++
             *+++++++++++++++++++++++++++++++++++++++++++++++
-            *+++++++++++++++++++++++++++++++++++++++++++++++`
-
-      const fmt = '%c' + art.replace(/%/g, '%%');  // escape all %
-      const css = 'font-family: monospace; white-space: pre; line-height:1;';
-      console.log(fmt, css);
-    </script>
- 
-  </head>
-  <body>
-    <div style="margin-top:30px;margin-left:20px">
-      <div style="font-size:28px;font-family:serif">Timothy Liu</div>
-      <div style="font-size:14px;max-width:500px;">
-          <p>Working on <a href="https://implied.com" target="_blank">Implied</a>.</p>
-      <figure>
-        <div class="iframe-container">
-          <iframe src="https://implied-3d-logo.tliu.io" scrolling="no" style="width:150px;height:200px;border:0;"></iframe>
-        </div>
+            *+++++++++++++++++++++++++++++++++++++++++++++++
+        </pre>
       </figure>
     </div>
 

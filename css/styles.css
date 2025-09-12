@@ -31,13 +31,14 @@
 }
 
 html {
-    background-color: #EEE1C6;
+    background-color: #FAFAFA;
     color: #1c364e;
-    user-select: none;
-    /* font-family: Times New Roman,Times,serif; */
-    /* font-family: sans-serif; */
-    font-family: 'Berkeley Mono', monospace;
+    font-family: sans-serif;
     line-height: 1.25;
+}
+
+pre {
+    font-family: 'Berkeley Mono', monospace;
 }
 
 a {

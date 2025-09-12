@@ -1,0 +1,12 @@
+.blog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100vw;
+    font-size: 14px;
+}
+
+.blog-content {
+    max-width: 750px;
+}

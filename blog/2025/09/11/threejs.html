@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <link rel="stylesheet" href="../../../styles.css">
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timothy Liu</title>
+  </head>
+  <body class="blog-body">
+    <div class="blog-content">
+      <h2>ThreeJS Fun</h2>
+
+      <p>
+        Below is some basic code I wrote last year when I was first exploring <a href="https://threejs.org/" target="_blank">ThreeJS</a>.
+        I couldn't get the lighting and shadows to look quite as fancy as some other rendered logos out there, but I was pretty happy with how it looked
+        and wanted to memorialize it on this site.
+      </p>
+      <pre style="background-color:#E5E5E5;padding:10px">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
+// Renderer setup
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+// Enable tone mapping and correct encoding
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.outputEncoding = THREE.sRGBEncoding;
+
+document.body.appendChild( renderer.domElement );
+
+// Scene and camera setup
+const scene = new THREE.Scene();
+// scene.background = new THREE.Color(0xFFFDFA);
+renderer.setClearColor(0x000000, 0);
+
+const aspect = window.innerWidth / window.innerHeight;
+const camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 1000);
+camera.position.set( 0, 0, 100 );
+camera.lookAt( 0, 0, 0 );
+
+// OrbitControls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.rotateSpeed = 0.5;
+controls.enableRotate = true;
+controls.enableZoom = false;
+controls.enablePan = false;
+controls.minPolarAngle = Math.PI / 2;
+controls.maxPolarAngle = Math.PI / 2;
+
+
+// Helper function to create extruded shapes
+function createExtrudedShape(points, meshSettings) {
+    const shape = new THREE.Shape();
+    shape.moveTo(points[0].x, points[0].y);
+    for (const point of points.slice(1)) {
+        shape.lineTo(point.x, point.y);
+    }
+
+    const extrudeSettings = {
+        steps: 1,
+        depth: 8,
+        bevelEnabled: true,
+        bevelThickness: 0.2,
+        bevelSize: 0.2,
+        bevelOffset: 0,
+        bevelSegments: 5
+    };
+    
+    const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+    const material = new THREE.MeshPhysicalMaterial(meshSettings);
+    const mesh = new THREE.Mesh(geometry, material);
+
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+
+    return mesh;
+}
+
+// Group to hold all objects
+const group = new THREE.Group();
+
+// Materials with adjusted properties
+const materialSettings = {
+    roughness: 0.1,
+    metalness: 0.9,
+    reflectivity: 0.9,
+    clearcoat: 0.5,
+    clearcoatRoughness: 0,
+    side: THREE.DoubleSide,
+};
+
+// Create cube
+const boxGeometry = new THREE.BoxGeometry(8, 8, 8);
+const boxMaterial = new THREE.MeshPhysicalMaterial({
+    color: 0xFDD0A0,
+    ...materialSettings,
+});
+const cube = new THREE.Mesh(boxGeometry, boxMaterial);
+cube.position.z = -20;
+cube.castShadow = true;
+cube.receiveShadow = false;
+group.add(cube);
+
+// Create mesh1
+const points1 = [
+    new THREE.Vector3(-10, 10, 0),
+    new THREE.Vector3(-10, -20, 0),
+    new THREE.Vector3(20, -20, 0),
+    new THREE.Vector3(20, 20, 0),
+    new THREE.Vector3(25, 15, 0),
+    new THREE.Vector3(25, -25, 0),
+    new THREE.Vector3(-15, -25, 0),
+    new THREE.Vector3(-15, 15, 0),
+    new THREE.Vector3(5, 15, 0),
+    new THREE.Vector3(5, 10, 0),
+    new THREE.Vector3(-10, 10, 0),
+];
+const mesh1MaterialSettings = {
+    color: 0xFB9120,
+    ...materialSettings,
+};
+const mesh1 = createExtrudedShape(points1, mesh1MaterialSettings);
+group.add(mesh1);
+
+// Create mesh2
+const points2 = [
+    new THREE.Vector3(-4, -10, 0),
+    new THREE.Vector3(-4, -15, 0),
+    new THREE.Vector3(15, -15, 0),
+    new THREE.Vector3(15, 25, 0),
+    new THREE.Vector3(-25, 25, 0),
+    new THREE.Vector3(-25, -15, 0),
+    new THREE.Vector3(-20, -20, 0),
+    new THREE.Vector3(-20, 20, 0),
+    new THREE.Vector3(10, 20, 0),
+    new THREE.Vector3(10, -10, 0),
+    new THREE.Vector3(-4, -10, 0),
+];
+const mesh2MaterialSettings = {
+    color: 0xFCB262,
+    ...materialSettings,
+};
+const mesh2 = createExtrudedShape(points2, mesh2MaterialSettings);
+mesh2.position.z = -10;
+group.add(mesh2);
+
+scene.add(group);
+
+// Lights
+const ambientLight = new THREE.AmbientLight(0x404040, 5);
+scene.add(ambientLight);
+
+const frontLight = new THREE.DirectionalLight(0xFCB262, 2);
+frontLight.position.set(-20, -20, 50);
+frontLight.castShadow = true;
+scene.add(frontLight);
+
+const frontLight2 = new THREE.DirectionalLight(0xFCB262, 2);
+frontLight2.position.set(20, -20, 50);
+frontLight2.castShadow = true;
+scene.add(frontLight2);
+
+const frontLight3 = new THREE.DirectionalLight(0xFCB262, 5);
+frontLight3.position.set(20, -20, -50);
+frontLight3.castShadow = true;
+scene.add(frontLight3);
+
+const frontLight4 = new THREE.DirectionalLight(0xFCB262, 5);
+frontLight4.position.set(-20, -20, -50);
+frontLight4.castShadow = true;
+scene.add(frontLight4);
+
+
+const frontLight5 = new THREE.DirectionalLight(0xFCB262, 2);
+frontLight5.position.set(0, 50, 0);
+frontLight5.lookAt(0, 0, 0)
+frontLight5.castShadow = true;
+scene.add(frontLight5);
+    </pre>
+
+    <div class="iframe-container" id="implied-3d">
+      <iframe src="https://implied-3d-logo.tliu.io" scrolling="no" style="width:150px;height:200px;border:0;"></iframe>
+    </div>
+
+      <p><a href="/blog.html">← Blog</a></p>
+    </div>
+  </body>
+
+</html>
+<!DOCTYPE HTML>
