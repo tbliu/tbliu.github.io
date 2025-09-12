@@ -30,7 +30,7 @@ def convert_to_html_string(title: str, quotes: List[str]) -> str:
             </ul>
           </div>
         </div>
-        <p id="blog-footer"><a href="/blog.html">←</a></p>
+        <p id="blog-footer"><a href="/blog">←</a></p>
 
     </html>
     <!DOCTYPE HTML>
