@@ -12,11 +12,98 @@
     max-width: 750px;
 }
 
+.catalog {
+    margin: 0 auto;
+}
+
 .title {
     background-color: #2B2B2B;
     color: #FAFAFA;
-    width: 100%;
+    width: calc(100% + 10px);
+    margin-left: -5px;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 5px;
+}
+
+/* Mobile responsiveness for blog pages */
+@media screen and (max-width: 768px) {
+    .blog {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .title {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+    }
+    
+    .catalog {
+        width: 100%;
+        font-size: 13px;
+        margin: 0 auto;
+    }
+    
+    .catalog td, .catalog th {
+        min-width: auto;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    
+    div[style*="padding:10px"] {
+        padding: 5px !important;
+        text-align: center;
+    }
+    
+    div[style*="padding:10px"] p {
+        text-align: left;
+    }
+    
+    pre {
+        overflow-x: auto;
+        font-size: 12px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    
+    .iframe-container {
+        width: 100% !important;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog {
+        padding: 0 5px;
+        font-size: 13px;
+    }
+    
+    .title {
+        width: calc(100% + 10px);
+        margin-left: -5px;
+    }
+    
+    .catalog {
+        font-size: 12px;
+    }
+    
+    .catalog td, .catalog th {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    
+    pre {
+        font-size: 11px;
+        padding: 5px !important;
+    }
+    
+    .iframe-container {
+        max-width: 250px;
+    }
 }
