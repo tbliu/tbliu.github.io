@@ -38,7 +38,7 @@ html {
 }
 
 pre {
-    font-family: 'Berkeley Mono', monospace;
+    font-family: 'Berkeley Mono', 'Courier New', Courier, monospace;
 }
 
 a {
