@@ -117,8 +117,3 @@ a:hover {
         right: 5px !important;
     }
 }
-
-html {
-    background-image: radial-gradient(#ccc 1px, transparent 1px);
-    background-size: 20px 20px;
-}
