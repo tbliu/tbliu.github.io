@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   var target = document.getElementById('sidebar');
   if (!target) return;
 
@@ -17,4 +17,4 @@ document.addEventListener('DOMContentLoaded', function() {
       </ul>
     </div>
   `;
-});
+})();

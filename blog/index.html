@@ -22,16 +22,16 @@
       }
     </style>
 
-    <script src="/components/sidebar.js"></script>
   </head>
-  <body style="user-select:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;">
-    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:0 8rem;width:90%;max-width:1100px;padding-top:3rem;">
+  <body style="display:flex;flex-direction:column;align-items:center;overflow:hidden;">
+      <main>
       <div id="sidebar" style="position:sticky;top:3rem;align-self:start;"></div>
+      <script src="/components/sidebar.js"></script>
 
-      <div style="font-size:14px;">
-        <table class="catalog">
+      <div style="padding-top:2.5rem">
+        <table style="margin:0 auto;width:100%">
           <thead>
-            <tr style="background-color:#2B2B2B;color:#FAFAFA">
+            <tr style="background-color:#2B2B2B;color:#EDECEA">
               <th>Date</th>
               <th>Title</th>
             </tr>
@@ -45,7 +45,7 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </main>
   </body>
 
 </html>
