@@ -44,9 +44,14 @@
   font-style: italic;
 }
 
+:root {
+    --primary-color: #EDECEA;
+    --secondary-color: #1c364e;
+}
+
 html {
-    background-color: #EDECEA;
-    color: #1c364e;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: 'Dia', 'Arial', sans-serif;
     line-height: 1.25;
     text-shadow: 0 0 0 rgba(0,0,0,0),

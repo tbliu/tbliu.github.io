@@ -1,3 +1,5 @@
+@import url("/css/styles.css");
+
 .blog {
     display: flex;
     flex-direction: column;
@@ -9,7 +11,7 @@
 
 .title {
     background-color: #2B2B2B;
-    color: #EDECEA;
+    color: var(--primary-color);
     width: calc(100% + 10px);
     margin-left: -5px;
     padding-top: 3px;
