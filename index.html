@@ -9,12 +9,6 @@
     <title>Timothy Liu</title>
 
     <style>
-      .header {
-          font-family: 'Noe Standard', 'Times New Roman', serif;
-          font-weight: 400;
-          font-size: 32px;
-      }
-
       li {
         margin-top: 4px;
       }
@@ -24,20 +18,11 @@
         margin-right: 0;
       }
     </style>
+    <script src="/components/sidebar.js"></script>
   </head>
   <body style="user-select:none;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden;">
     <div style="display:grid;grid-template-columns:auto 1fr auto;gap:0 8rem;width:90%;max-width:1100px;padding-top:12rem;">
-      <div style="display:flex;flex-direction:column;align-items:baseline;">
-        <span class="header">Timothy</span>
-        <span class="header">Liu</span>
-
-        <ul style="padding-top:1rem;list-style:none;padding-left:0;font-size:12px;text-align:left;">
-          <li><a href="https://github.com/tbliu" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/tbliu/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://twitter.com/tbliu" target="_blank">Twitter</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </div>
+      <div id="sidebar"></div>
 
       <div style="display:flex;flex-direction:column;align-items:start;text-align:start;padding-top:2.5rem;font-size:18px">
         <p>
