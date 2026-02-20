@@ -30,7 +30,7 @@ h3.subtitle {
     margin-bottom: 0.25rem;
 }
 
-ol, ul {
+article ol, article ul {
     padding-left: 1rem;
     margin-top: 0;
 }
