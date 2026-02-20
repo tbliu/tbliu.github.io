@@ -49,6 +49,16 @@
     --secondary-color: #1c364e;
 }
 
+html.eink-invert {
+    filter: invert(1) grayscale(1) contrast(1.15);
+}
+
+::selection {
+    background-color: #1c364e;
+    color: #EDECEA;
+    text-shadow: none;
+}
+
 html {
     background-color: var(--primary-color);
     color: var(--secondary-color);
