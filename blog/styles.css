@@ -67,11 +67,11 @@ article ol, article ul {
     
     div[style*="padding:10px"] {
         padding: 5px !important;
-        text-align: center;
+        text-align: start;
     }
     
     div[style*="padding:10px"] p {
-        text-align: left;
+        text-align: start;
     }
     
     pre {
