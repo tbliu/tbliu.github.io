@@ -324,7 +324,7 @@
         </p>
 
         <figure>
-          <iframe width="750" src="https://www.youtube.com/embed/ThJbysa2TLY?si=zBvIJ5DXFOJvguUr&amp;start=46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="750" height="500" src="https://www.youtube.com/embed/ThJbysa2TLY?si=zBvIJ5DXFOJvguUr&amp;start=46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <figcaption>A demonstration of how to ride a fixie. Skid demonstration starts at 2:20</figcaption>
         </figure>
 
@@ -345,16 +345,27 @@
         </p>
 
         <p>
-          Because the greatest common divisor (gcd) of 48 and 16 is 16,
-          the back wheel rotates a perfect integer number of rotations
+          Because 48 / 16 = 3, the back wheel rotates a perfect integer number of rotations
           per pedal cycle (in this case, 3). This means that every time the rider
           brakes, the back wheel will skid in the same position every time.
         </p>
 
         <p>
           For a ratio like 48/17, where the number of back teeth do not divide cleanly
-          into the number of front teeth i.e. gcd(48, 17) = 1, the rider will have 17
-          distinct skid spots, which means less wear on a single spot on the rear tire.
+          into the number of front teeth, this is less of an issue. In fact, since the
+          the greatest common divisor (gcd) of 48 and 17 is 1, it will take 17 full cycles before
+          the wheel and pedal line back up, and the rider will have 17 distinct skid spots.
+          This means less wear on a single spot on the rear tire.
+        </p>
+
+        <p>
+          For a ratio like 40/16 = 2.5, we can see that after one full cycle, the back wheel
+          is offset by half a revolution, which means the rider will have two distinct skid spots.
+        </p>
+
+        <p>In general:</p>
+        <p class="equation">
+          skid spots = # of rear teeth / gcd(front teeth, rear teeth)
         </p>
 
         <h3>Beyond Fixies</h3>
