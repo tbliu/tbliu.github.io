@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../styles.css">
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timothy Liu</title>
+  </head>
+  <body>
+    <main>
+      <div id="sidebar"></div>
+      <script src="/components/sidebar.js"></script>
+
+      <article>
+        <h2 class="title">The "Minimum" Bike and Fixies</h2>
+        <p>
+          <i>Part 1 of a <a href="/blog/2026/bike-mechanics/">series</a>.</i>
+        </p>
+        
+        <h3>Overview</h3>
+        <p>
+          What is the minimum mechanism required to turn pedaling into motion?
+          The fundamental components are:
+        </p>
+        <ul>
+          <li>A crank to connect your leg motion to the drivetrain (via the pedals)</li>
+          <li>A front gear (called a chainring) that attaches to the crank</li>
+          <li>A back gear (called a cog) that attaches to the back wheel</li>
+          <li>A chain to connect the two gears</li>
+          <li>Wheels to propel the rider forward</li>
+        </ul>
+        <p>
+          Collectively the parts that make the bike move are called the “drivetrain”.
+          The specifics of what exactly goes into a drivetrain vary across different
+          types of bikes, but generally they will have these components.
+        </p>
+
+        <h3>The Chain</h3>
+        <p>
+          Modern bikes have the rider seated in the middle of the frame, there needs to
+          be a way to deliver the power from the pedals to the rear wheel. When pedaling
+          forward, the teeth in the front gear pull the chain forward, which then pulls
+          on the teeth of the rear cog, which drives the entire bike forward.
+          (Note: these gears are also called <a href="https://en.wikipedia.org/wiki/Sprocket" target="_blank">“sprockets”</a>) 
+        </p>
+
+        <div>INTERACTIVE DIAGRAM GOES HERE</div>
+
+        <p>
+          While there are other mechanisms you can use to connect the two gears, like
+          a <a href="https://en.wikipedia.org/wiki/Belt-driven_bicycle" target="_blank">belt</a>
+          or a <a href="https://en.wikipedia.org/wiki/Shaft-driven_bicycle" target="_blank">shaft</a>,
+          chains are light, cheap, simple to maintain, and flexible (more important when we talk
+          about shifting in a later post).
+        </p>
+
+        <p>
+          Technically a bike doesn't need a chain or gears. Penny-farthings had a
+          direct-drive action where the pedals were attached directly to the front wheel.
+          However, that locks you into a 1/1 gear ratio since one full pedal revolution must
+          equal one full wheel revolution. If you were to do this on a normal bike wheel,
+          you would have to pedal like crazy just to get anywhere. In order to move at a
+          practical pace, the only way to go faster in a direct-drive-system is to increase
+          the wheel size, which is why penny-farthings look like that. Gear ratios are what
+          allow us to manufacture and ride bikes more proportional to the human body.
+        </p>
+
+        <div>PHOTO OF A PENNY-FARTHING</div>
+        <div>PHOTO OF A TRICYCLE</div>
+
+        <h3>How the Chain and Gears Interact</h3>
+        <p>
+          Like any other chain, the bike chain is made up of individual links. Where it
+          differs from other chains is that each individual link has a roller. As the name
+          implies, the roller rolls as the gear tooth slots into the chain link. This reduces
+          overall friction in the system compared to if the tooth pushed directly on the chain
+          itself.
+        </p>
+
+        <p>
+          Less friction means less energy loss and less mechanical wear on the system.
+        </p>
+
+        <div>INTERACTIVE DIAGRAM GOES HERE</div>
+
+        <p>
+          Note the gear teeth themselves have gentle sloping (rather than a perfectly
+          square tooth) to allow the teeth to slot into the gaps of the chain and engage
+          with the rollers.
+        </p>
+
+        <div>PICTURE GOES HERE</div>
+
+        <p>
+          At any given point, there are multiple gear teeth engaged in the chain.
+          This means that no one tooth is responsible for bearing the entire force of the
+          chain's tension at once. With the teeth engaged in the chain, pedal force presses
+          the rollers more firmly into the sprocket valleys. This means that, under a healthy
+          system, no amount of human-pedaling force will cause the system to disengage.
+          The only ways the chain can be disengaged from the gear teeth then are by manually
+          lifting it out or if the gears or chain themselves are worn or broken.
+        </p>
+
+        <h3>Gear Ratios</h3>
+        <p>
+          Gear ratio is the ratio of teeth between the front and back gears. Because the
+          chain has a fixed gap between each link (called the chain pitch), a gear with
+          more teeth must be proportionally larger to accommodate those extra teeth.
+        </p>
+
+        <p>
+          One example of a gear ratio might be 48 teeth on the chainring and 17 teeth on
+          the back cog, or 48/17 (2.823). 
+        </p>
+
+        <p>
+          In practice what do these different gears mean for the rider?
+        </p>
+        <div>INTERACTIVE DIAGRAM</div>
+
+        <p>
+          As we decrease the number of teeth in the back gear and/or increase the
+          number of teeth in the front gear, then one full pedal revolution means the
+          back gear will revolve around more times. For a set number of rotations per
+          minute (called a “cadence”), this means you'll go faster than if you had more
+          teeth in the back gear / fewer teeth in the front.
+        </p>
+
+        <p>
+          So why doesn't everyone run the largest practical gear ratio possible?
+          Because larger gear ratios mean more effort must be exerted by the rider to move.
+          Everyone who has ridden a bike has experienced trying to climb a hill on their
+          hardest gears and feeling the resistance increase as they begin the ascent.
+        </p>
+
+        <h3>Levers of a Bike</h3>
+        <p>
+          To understand this, we need to understand how torque works. Torque is the rotational
+          equivalent of force. Torque is equal to the length of the lever * the force applied.
+          When you tighten a bolt with a wrench, the wrench is the lever. That’s why it’s
+          easier to tighten a bolt with a longer wrench than a shorter one: Assuming you’re
+          applying the same amount of linear force, a longer lever allows you to apply more
+          torque to tighten the bolt.
+        </p>
+
+        <div>INTERACTIVE DIAGRAM</div>
+
+        <p>
+          With bicycles, the levers are the crank arms that attach the front chainring to the
+          pedals. The rider applies a force onto the pedals with his feet and generates torque
+          at the chainring (tau_crank). Now the front chainring wants to spin. 
+        </p>
+
+        <p>
+          Now note that the chainring itself is also a lever. Its lever length is the radius
+          of the chainring from the axle to its teeth (more accurately: its “pitch radius”).
+          As the chainring spins, its teeth pull on the rollers of the chain.
+          This pulling action creates tension in the chain. The chain itself carries this
+          tension, which is a linear force, to the rear cog.
+        </p>
+
+        <p>
+          The relationship between chain tension and crank torque is the same as the
+          relationship between force and torque for any other lever:
+        </p>
+
+        <p>
+          ```
+tau_crank = T_chain * r_chainring
+T_chain = tau_crank/r_chainring
+```
+
+        </p>
+
+        <p>
+          Now because the chain is also connected to the back teeth, it pulls on the back cogs
+          through the top of the chain as well. Like the chainring, the back cog is also a lever
+          arm; it has a length of r_cog. Then, the torque applied to the back wheel is
+          tau_wheel = T_chain * r_cog.
+        </p>
+
+        <p>
+          Substituting our value for T_chain:
+Tau_wheel = (tau_crank/r_chainring)*r_cog
+Tau_wheel = tau_crank * (r_cog/r_chainring)
+        </p>
+
+        <div>INTERACTIVE DIAGRAM</div>
+
+        <p>
+          Because a smaller rear gear (or larger front gear) produces less wheel torque for
+          the same pedal force, the rider must push harder on the pedals to achieve the same
+          wheel torque. 
+        </p>
+
+        <p>
+          Now we have `tau_wheel` which is twisting on the rear wheel. We have one last
+          conversion to translate this into forward movement for the rider. Like with the
+          sprockets, we can view the wheel itself as a lever with length r_wheel.
+        </p>
+
+        <p>
+          tau_wheel spins the wheel which pushes back on the road which in turn pushes
+          forward on the wheel. At the specific patch where the wheel makes contact with
+          the road:
+        </p>
+
+        <p>
+          ```
+tau_wheel = F_drive * r_wheel
+F_drive   = tau_wheel / r_wheel
+```
+        </p>
+
+        <p>
+          Where F_drive is the force that propels the bike forward.
+        </p>
+
+        <p>Putting this all together:
+        </p>
+
+        <p>
+          ```
+F_drive = tau_crank * (r_cog / r_chainring) / r_wheel
+F_drive = tau_crank / (gear_ratio * r_wheel)
+```
+        </p>
+
+        <p>
+          From this we see that increasing speed by increasing the wheel radius or gear
+          ratio comes at a cost. As these values get bigger, F_drive decreases for the
+          same amount of effort the rider puts in. To maintain the same F_drive, the rider
+          must apply more force into the pedals.
+        </p>
+
+        <h3>Chain Tension</h3>
+        <p>
+          Because chain tension is what ultimately delivers power throughout the drivetrain,
+          it’s important that the chain stays under tension to ensure it does not fall off the
+          gears. 
+        </p>
+
+        <p>
+          One thing that I found interesting while researching this article is that the chain
+          is under higher tension at the top of the drivetrain than the bottom.
+        </p>
+
+        <div>PICTURE GOES HERE</div>
+
+        <p>
+          At the top, the chain is delivering power by pulling on the rear cog,
+          creating torque on the back wheel, so it’s here that the chain becomes highly
+          tensioned. At the bottom there is nothing driving the chain as hard, so it becomes
+          less tensioned here.
+        </p>
+
+        <p>
+          The important thing to take away here is that tension is not distributed evenly
+          across the entire chain. In fact it is this difference in tension that allows the
+          wheel to rotate; if both sides were evenly tensioned, then the net torque would be zero.
+        </p>
+
+        <p>
+          The front teeth inject force into the chain, increasing tension. The rear teeth
+          extract force from the chain to propel the bike, which decreases tension.
+        </p>
+
+        <div>INTERACTIVE DIAGRAM</div>
+
+        <h3>Putting it all together: The Fixie</h3>
+        <p>
+          With a fixed-gear bike, or “fixie”, the two gears are connected directly by the
+          chain, which means pedaling backwards moves the bike backwards. This also means
+          that your feet are always moving in the direction the bike is moving.
+        </p>
+
+        <div>INTERACTIVE DIAGRAM</div>
+        <p>
+          For fixies without dedicated handbrakes, braking is done by resisting the forward
+          momentum of the pedals.
+        </p>
+
+        <h4>Aside: Fixie Braking</h4>
+        <p>Common gear ratios for fixies are:</p>
+        <ul>
+          <li>46/16 (2.875)</li>
+          <li>47/17 (2.764)</li>
+          <li>49/17 (2.882)</li>
+          <li>48/16 (3)</li>
+        </ul>
+
+        <p>
+          For fixies without handbrakes, riders need to consider “skid spots”,
+          which is a function of their gear ratios. Let’s assume a fixie rider has a
+          48/16 gear ratio and always initiates braking with his right foot at 3 o’clock
+          and left foot at 9 o’clock.
+        </p>
+
+        <p>
+          Because gcd(48,16) = 16, the back wheel rotates a perfect integer number of
+          rotations per pedal cycle (in this case, 3). This means that every time the rider
+          brakes, the back wheel will skid in the same position every time.
+        </p>
+
+        <p>
+          For a ratio like 48/17, where the number of back teeth do not divide cleanly
+          into the number of front teeth i.e. gcd(48, 17) = 1, the rider will have 17
+          distinct skid spots, which means less wear on a single spot on the rear tire.
+        </p>
+
+        <h3>Beyond Fixies</h3>
+        <p>
+          One appeal of fixies is that they’re incredibly simple, and simpler mechanisms
+          tend to have fewer spots that can break down. However, the primary downside is
+          that it requires a completely rigid connection between your legs and the pedals.
+        </p>
+
+        <p>
+          How can we break that connection while still transmitting power?
+          The answer is a freewheel or freehub, which I’ll expand on in the next article of
+          the series.
+        </p>
+
+      </article>
+    </main>
+  </body>
+</html>
