@@ -30,9 +30,25 @@ h3.subtitle {
     margin-bottom: 0.25rem;
 }
 
+.equation {
+    background-color:#E5E5E5;
+    padding: 10px;
+}
+
 article ol, article ul {
     padding-left: 1rem;
     margin-top: 0;
+}
+
+article figure {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure figcaption {
+    font-size: 14px;
 }
 
 /* Mobile responsiveness for blog pages */

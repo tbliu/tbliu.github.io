@@ -34,7 +34,7 @@
           <li>Wheels to propel the rider forward</li>
         </ul>
         <p>
-          Collectively the parts that make the bike move are called the “drivetrain”.
+          Collectively the parts that make the bike move are called the "drivetrain".
           The specifics of what exactly goes into a drivetrain vary across different
           types of bikes, but generally they will have these components.
         </p>
@@ -45,7 +45,7 @@
           be a way to deliver the power from the pedals to the rear wheel. When pedaling
           forward, the teeth in the front gear pull the chain forward, which then pulls
           on the teeth of the rear cog, which drives the entire bike forward.
-          (Note: these gears are also called <a href="https://en.wikipedia.org/wiki/Sprocket" target="_blank">“sprockets”</a>) 
+          (Note: these gears are also called <a href="https://en.wikipedia.org/wiki/Sprocket" target="_blank">"sprockets"</a>) 
         </p>
 
         <div>INTERACTIVE DIAGRAM GOES HERE</div>
@@ -61,6 +61,19 @@
         <p>
           Technically a bike doesn't need a chain or gears. Penny-farthings had a
           direct-drive action where the pedals were attached directly to the front wheel.
+        </p>
+
+        <figure>
+          <a
+            title="Agnieszka Kwiecień (Nova), CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
+            href="https://commons.wikimedia.org/wiki/File:Ordinary_bicycle01.jpg"
+          >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Ordinary_bicycle01.jpg" alt="A penny-farthing" />
+          </a>
+          <figcaption>A penny-farthing.</figcaption>
+        </figure>
+
+        <p>
           However, that locks you into a 1/1 gear ratio since one full pedal revolution must
           equal one full wheel revolution. If you were to do this on a normal bike wheel,
           you would have to pedal like crazy just to get anywhere. In order to move at a
@@ -69,8 +82,14 @@
           allow us to manufacture and ride bikes more proportional to the human body.
         </p>
 
-        <div>PHOTO OF A PENNY-FARTHING</div>
-        <div>PHOTO OF A TRICYCLE</div>
+         <figure>
+          <a
+            title="NobbiP, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
+            href="https://commons.wikimedia.org/wiki/File:Dreirad_6336.jpg">
+            <img width="330" alt="A children's tricycle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Dreirad_6336.jpg/330px-Dreirad_6336.jpg">
+          </a>
+          <figcaption>Another example of a direct-drive vehicle.</figcaption>
+        </figure>
 
         <h3>How the Chain and Gears Interact</h3>
         <p>
@@ -126,7 +145,7 @@
           As we decrease the number of teeth in the back gear and/or increase the
           number of teeth in the front gear, then one full pedal revolution means the
           back gear will revolve around more times. For a set number of rotations per
-          minute (called a “cadence”), this means you'll go faster than if you had more
+          minute (called a "cadence"), this means you'll go faster than if you had more
           teeth in the back gear / fewer teeth in the front.
         </p>
 
@@ -140,9 +159,9 @@
         <h3>Levers of a Bike</h3>
         <p>
           To understand this, we need to understand how torque works. Torque is the rotational
-          equivalent of force. Torque is equal to the length of the lever * the force applied.
-          When you tighten a bolt with a wrench, the wrench is the lever. That’s why it’s
-          easier to tighten a bolt with a longer wrench than a shorter one: Assuming you’re
+          equivalent of force. Torque is equal to the length of the lever multiplied by the force applied.
+          When you tighten a bolt with a wrench, the wrench is the lever. That's why it's
+          easier to tighten a bolt with a longer wrench than a shorter one: Assuming you're
           applying the same amount of linear force, a longer lever allows you to apply more
           torque to tighten the bolt.
         </p>
@@ -152,12 +171,12 @@
         <p>
           With bicycles, the levers are the crank arms that attach the front chainring to the
           pedals. The rider applies a force onto the pedals with his feet and generates torque
-          at the chainring (tau_crank). Now the front chainring wants to spin. 
+          at the chainring (<var>&tau;</var><sub>crank</sub>). Now the front chainring wants to spin. 
         </p>
 
         <p>
           Now note that the chainring itself is also a lever. Its lever length is the radius
-          of the chainring from the axle to its teeth (more accurately: its “pitch radius”).
+          of the chainring from the axle to its teeth (more accurately: its "pitch radius").
           As the chainring spins, its teeth pull on the rollers of the chain.
           This pulling action creates tension in the chain. The chain itself carries this
           tension, which is a linear force, to the rear cog.
@@ -168,25 +187,28 @@
           relationship between force and torque for any other lever:
         </p>
 
-        <p>
-          ```
-tau_crank = T_chain * r_chainring
-T_chain = tau_crank/r_chainring
-```
-
+        <p class="equation">
+          <var>&tau;</var><sub>crank</sub> = <var>T</var><sub>chain</sub> &middot; <var>r</var><sub>chainring</sub> <br />
+          <var>T</var><sub>chain</sub> = <var>&tau;</var><sub>crank</sub> / <var>r</var><sub>chainring</sub>
         </p>
 
         <p>
           Now because the chain is also connected to the back teeth, it pulls on the back cogs
           through the top of the chain as well. Like the chainring, the back cog is also a lever
-          arm; it has a length of r_cog. Then, the torque applied to the back wheel is
-          tau_wheel = T_chain * r_cog.
+          arm; it has a length of <var>r</var><sub>cog</sub>. Then, the torque applied to the back wheel is:
+        </p>
+
+        <p class="equation">
+          <var>&tau;</var><sub>wheel</sub> = <var>T</var><sub>chain</sub> &middot; <var>r</var><sub>cog</sub>
         </p>
 
         <p>
-          Substituting our value for T_chain:
-Tau_wheel = (tau_crank/r_chainring)*r_cog
-Tau_wheel = tau_crank * (r_cog/r_chainring)
+          Substituting our value for <var>T</var><sub>chain</sub>:
+        </p>
+
+        <p class="equation">
+          <var>&tau;</var><sub>wheel</sub> = (<var>&tau;</var><sub>crank</sub> / <var>r</var><sub>chainring</sub>) &middot; <var>r</var><sub>cog</sub> <br />
+          <var>&tau;</var><sub>wheel</sub> = <var>&tau;</var><sub>crank</sub> &middot; (<var>r</var><sub>cog</sub> / <var>r</var><sub>chainring</sub>)
         </p>
 
         <div>INTERACTIVE DIAGRAM</div>
@@ -198,62 +220,51 @@ Tau_wheel = tau_crank * (r_cog/r_chainring)
         </p>
 
         <p>
-          Now we have `tau_wheel` which is twisting on the rear wheel. We have one last
+          Now we have <var>&tau;</var><sub>wheel</sub> which is twisting on the rear wheel. We have one last
           conversion to translate this into forward movement for the rider. Like with the
-          sprockets, we can view the wheel itself as a lever with length r_wheel.
+          sprockets, we can view the wheel itself as a lever with length <var>r</var><sub>wheel</sub>.
         </p>
 
         <p>
-          tau_wheel spins the wheel which pushes back on the road which in turn pushes
+          <var>&tau;</var><sub>wheel</sub> spins the wheel which pushes back on the road which in turn pushes
           forward on the wheel. At the specific patch where the wheel makes contact with
           the road:
         </p>
 
-        <p>
-          ```
-tau_wheel = F_drive * r_wheel
-F_drive   = tau_wheel / r_wheel
-```
+        <p class="equation">
+          <var>&tau;</var><sub>wheel</sub> = <var>F</var><sub>drive</sub> &middot; <var>r</var><sub>wheel</sub> <br />
+          <var>F</var><sub>drive</sub> = <var>&tau;</var><sub>wheel</sub> / <var>r</var><sub>wheel</sub>
         </p>
 
         <p>
-          Where F_drive is the force that propels the bike forward.
+          Where <var>F</var><sub>drive</sub> is the force that propels the bike forward.
         </p>
 
         <p>Putting this all together:
         </p>
 
-        <p>
-          ```
-F_drive = tau_crank * (r_cog / r_chainring) / r_wheel
-F_drive = tau_crank / (gear_ratio * r_wheel)
-```
+        <p class="equation">
+          <var>F</var><sub>drive</sub> = <var>&tau;</var><sub>crank</sub> &middot; (<var>r</var><sub>cog</sub> / <var>r</var><sub>chainring</sub>) / <var>r</var><sub>wheel</sub> <br />
+          <var>F</var><sub>drive</sub> = <var>&tau;</var><sub>crank</sub> / (gear ratio &middot; <var>r</var><sub>wheel</sub>)
         </p>
 
         <p>
           From this we see that increasing speed by increasing the wheel radius or gear
-          ratio comes at a cost. As these values get bigger, F_drive decreases for the
-          same amount of effort the rider puts in. To maintain the same F_drive, the rider
+          ratio comes at a cost. As these values get bigger, <var>F</var><sub>drive</sub> decreases for the
+          same amount of effort the rider puts in. To maintain the same <var>F</var><sub>drive</sub> , the rider
           must apply more force into the pedals.
         </p>
 
         <h3>Chain Tension</h3>
         <p>
           Because chain tension is what ultimately delivers power throughout the drivetrain,
-          it’s important that the chain stays under tension to ensure it does not fall off the
+          it's important that the chain stays under tension to ensure it does not fall off the
           gears. 
         </p>
 
         <p>
-          One thing that I found interesting while researching this article is that the chain
-          is under higher tension at the top of the drivetrain than the bottom.
-        </p>
-
-        <div>PICTURE GOES HERE</div>
-
-        <p>
           At the top, the chain is delivering power by pulling on the rear cog,
-          creating torque on the back wheel, so it’s here that the chain becomes highly
+          creating torque on the back wheel, so it's here that the chain becomes highly
           tensioned. At the bottom there is nothing driving the chain as hard, so it becomes
           less tensioned here.
         </p>
@@ -273,7 +284,7 @@ F_drive = tau_crank / (gear_ratio * r_wheel)
 
         <h3>Putting it all together: The Fixie</h3>
         <p>
-          With a fixed-gear bike, or “fixie”, the two gears are connected directly by the
+          With a fixed-gear bike, or "fixie", the two gears are connected directly by the
           chain, which means pedaling backwards moves the bike backwards. This also means
           that your feet are always moving in the direction the bike is moving.
         </p>
@@ -294,10 +305,10 @@ F_drive = tau_crank / (gear_ratio * r_wheel)
         </ul>
 
         <p>
-          For fixies without handbrakes, riders need to consider “skid spots”,
-          which is a function of their gear ratios. Let’s assume a fixie rider has a
-          48/16 gear ratio and always initiates braking with his right foot at 3 o’clock
-          and left foot at 9 o’clock.
+          For fixies without handbrakes, riders need to consider "skid spots",
+          which is a function of their gear ratios. Let's assume a fixie rider has a
+          48/16 gear ratio and always initiates braking with his right foot at 3 o'clock
+          and left foot at 9 o'clock.
         </p>
 
         <p>
@@ -314,14 +325,14 @@ F_drive = tau_crank / (gear_ratio * r_wheel)
 
         <h3>Beyond Fixies</h3>
         <p>
-          One appeal of fixies is that they’re incredibly simple, and simpler mechanisms
+          One appeal of fixies is that they're incredibly simple, and simpler mechanisms
           tend to have fewer spots that can break down. However, the primary downside is
           that it requires a completely rigid connection between your legs and the pedals.
         </p>
 
         <p>
           How can we break that connection while still transmitting power?
-          The answer is a freewheel or freehub, which I’ll expand on in the next article of
+          The answer is a freewheel or freehub, which I'll expand on in the next article of
           the series.
         </p>
 
